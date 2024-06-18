@@ -1,0 +1,9 @@
+Package: starlink
+Version: 0.0.1
+Description: Web app to help control starlink
+Maintainer: Lee Pepper
+Architecture: all
+License: MIT
+Section: utils
+Priority: optional
+Homepage: https://github.com/pepperlk/openwrt-starlink

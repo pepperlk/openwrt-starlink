@@ -1,0 +1,12 @@
+#!/bin/sh /etc/rc.common
+USE_PROCD=1
+START=98 # start order
+STOP=99 # stop order
+start_service() {
+    procd_open_instance
+    procd_set_param command /usr/bin/starlink # run the command without daemonizing
+    procd_set_param respawn 0 7 0 # respawn after 7 seconds delay
+    procd_set_param stdout 1 # redirect stdout to syslog
+    procd_set_param stderr 1 # redirect stderr to syslog
+    procd_close_instance
+}
